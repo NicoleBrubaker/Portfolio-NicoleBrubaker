@@ -1,0 +1,173 @@
+* {
+  text-align: center;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  line-height: 1.3;
+}
+
+h1,
+h2,
+h3 {
+  margin: 10px;
+  color: #5b736b;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+#headshot {
+  height: 500px;
+  width: auto;
+}
+
+#hello-img {
+  height: 600px;
+  width: auto;
+}
+
+/* Navigation and Footer */
+
+nav {
+  width: 100%;
+  height: 70px;
+  border-bottom: 3px solid #5b736b;
+  background-color: #f1c84f;
+}
+
+nav ul,
+footer ul {
+  height: 70px;
+  align-items: center;
+  display: flex;
+  justify-content: end;
+}
+
+nav ul li,
+footer ul li {
+  padding-right: 65px;
+}
+
+nav a,
+footer a {
+  color: #5b736b;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 19px;
+}
+
+footer {
+  width: 100%;
+  border-top: 3px solid #5b736b;
+  background-color: #f1c84f;
+}
+
+/* Project Card stylings */
+
+.project-card {
+  border: 2px solid #ffaf89;
+  border-radius: 1.5rem;
+  min-height: 420px;
+  width: 320px;
+  margin: 80px 50px;
+  padding: 10px;
+}
+
+.project-card:hover {
+    background-color: #FFE4D2;
+}
+
+.project-card p {
+  text-align: center;
+  font-size: 14px;
+  width: 90%;
+  padding: 10px;
+  margin: auto;
+}
+
+.project-card li {
+  font-size: 12px;
+}
+
+.project-card img {
+  height: 100px;
+  width: auto;
+  margin: 20px;
+}
+
+/* Experience, Skills, About Me section */
+
+.aboutme-header {
+  font-family: "Courgette", cursive;
+  font-size: 66px;
+  color: #5b736b;
+}
+
+#personal-description {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  font-size: 17px;
+  letter-spacing: .3px;
+}
+
+.aboutme-section {
+  max-width: 1300px;
+  margin: auto;
+  padding: 20px;
+}
+
+.experience,
+.skills {
+  padding-left: 50px;
+}
+
+.experience ul li,
+.skills ul li {
+  list-style-type: circle;
+  padding: 5px;
+  max-width: 250px;
+}
+
+/* Contact card styling */
+.contactcard {
+  border: 2px solid #ffaf89;
+  border-radius: 1.5rem;
+  height: 150px;
+  width: 800px;
+  margin: 50px 50px 80px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.contactcard h2 {
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.link-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 20px; 
+}
+
+.grid-item {
+    border: 2px solid #f1c84f;
+  border-radius: 1.5rem;
+  padding: 3px;
+  width: 150px;
+  text-decoration: none;
+  color: black;
+}
+
+.grid-item:hover {
+    background-color: #f1c84f;
+}
