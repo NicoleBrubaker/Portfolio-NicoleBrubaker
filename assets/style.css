@@ -13,12 +13,7 @@ h3 {
 }
 
 h2 {
-    font-size: 19px;
-}
-
-section {
-  display: flex;
-  justify-content: center;
+  font-size: 19px;
 }
 
 #headshot {
@@ -29,6 +24,21 @@ section {
 #hello-img {
   height: 600px;
   width: auto;
+}
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 767px) {
+  #hello-img {
+    width: 100%;
+    height:auto;
+  }
+  #headshot {
+    display: none;
+  }
 }
 
 /* Navigation and Footer */
@@ -50,7 +60,7 @@ footer ul {
 
 nav ul li,
 footer ul li {
-  padding-right: 65px;
+  padding: 20px;
 }
 
 nav a,
@@ -62,12 +72,21 @@ footer a {
 }
 
 footer {
-  width: 100%;
+  width: fill;
   border-top: 3px solid #5b736b;
   background-color: #f1c84f;
 }
 
+/* MOBILE - Navigation and Footer */
+
+
+
 /* Project Card stylings */
+
+#projects {
+  display: flex;
+  justify-content: center;
+}
 
 .project-card {
   border: 2px solid #ffaf89;
@@ -78,8 +97,9 @@ footer {
   padding: 10px;
 }
 
+
 .project-card:hover {
-    background-color: #FFE4D2;
+  background-color: #ffe4d2;
 }
 
 .project-card p {
@@ -88,16 +108,38 @@ footer {
   width: 90%;
   padding: 10px;
   margin: auto;
+  font-weight: 400;
+  color: black;
 }
 
-.project-card li {
-  font-size: 12px;
+.project-card li, .project-card a {
+  font-size: 15px;
+  padding: 5px 0px;
+  color: #5b736b;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .project-card img {
   height: 100px;
   width: auto;
   margin: 20px;
+}
+
+/* MOBILE - Project Card stylings */
+
+@media (max-width: 767px) {
+  #projects {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card {
+    margin: 30px;
+    width: auto;
+  }
+  .project-card p {
+    width: 95%;
+  }
 }
 
 /* Experience, Skills, About Me section */
@@ -113,28 +155,77 @@ footer {
   margin: auto;
   padding: 20px;
   font-size: 17px;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
 }
 
-.aboutme-section {
+.bottom-line {
+    width: 45%;
+    height: 2px;
+    background-color: #5b736b;
+    margin-inline: auto;
+    margin-block: 30px;
+  }
+
+#aboutme-section {
   max-width: 1300px;
   margin: auto;
   padding: 20px;
+  display: flex;
+  justify-content: center;
 }
 
-.experience,
-.skills {
-  padding-left: 50px;
-}
+.education,
+  .skills {
+    padding: 15px;
+    margin-inline: 25px;
+  }
 
-.experience ul li,
+.education ul li,
 .skills ul li {
-  list-style-type: circle;
+  list-style-type: none;
   padding: 5px;
   max-width: 250px;
+  margin: auto;
+}
+
+/* MOBILE - Experience, Skills, About Me section */
+
+@media (max-width: 767px) {
+  #personal-description {
+    font-size: 15px;
+    letter-spacing: 0.2px;
+  }
+
+  .bottom-line {
+    width: 55%;
+    margin-block: 20px;
+  }
+
+  #aboutme-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: none;
+  }
+  .aboutme-header {
+    width: 70%;
+    margin: auto;
+    padding: 15px 0px;
+  }
+  .education,
+  .skills {
+    padding: 15px;
+    margin-inline: auto;
+  }
 }
 
 /* Contact card styling */
+
+#contact {
+  display: flex;
+  justify-content: center;
+}
+
 .contactcard {
   border: 2px solid #ffaf89;
   border-radius: 1.5rem;
@@ -148,26 +239,56 @@ footer {
 }
 
 .contactcard h2 {
-    font-size: 25px;
-    line-height: 1.6;
+  font-size: 25px;
+  line-height: 1.6;
+  width: 150px;
 }
 
 .link-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 20px; 
+  gap: 20px;
+  padding: 5px;
 }
 
 .grid-item {
-    border: 2px solid #f1c84f;
+  border: 2px solid #f1c84f;
   border-radius: 1.5rem;
   padding: 3px;
   width: 150px;
   text-decoration: none;
   color: black;
+ 
 }
 
+
 .grid-item:hover {
-    background-color: #f1c84f;
+  background-color: #f1c84f;
+}
+
+/* MOBILE - Contact card styling */
+
+@media (max-width: 767px) {
+  .contactcard {
+    display: flex;
+    flex-direction: column;
+    height: 430px;
+    width: 90%;
+    margin: 50px 0px;
+  }
+  .contactcard p {
+    line-height: 24px;
+  }
+  .contactcard h2 {
+    width: auto;
+  }
+  .link-grid {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-item {
+    width: 230px;
+  }
 }
